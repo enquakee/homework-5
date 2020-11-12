@@ -1,0 +1,10 @@
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageInner {
+    max-width: 100px;
+    max-height: 100px;
+}

@@ -1,0 +1,1 @@
+And again this lazy frog skips his homework (0 баллов).

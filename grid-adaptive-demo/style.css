@@ -1,0 +1,60 @@
+@import 'image-style.css';
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    "title"
+    "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    grid-area: title;
+    justify-self: center;
+    font-size: 50px;
+}
+
+.mainContainer {
+    grid-area: content;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    max-width: 660px;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .mainContainer {
+        max-width: 550px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        grid-template-areas:
+        "content"
+        "title";
+        grid-template-rows: 4fr 1fr;
+    }
+
+    .mainContainer {
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
