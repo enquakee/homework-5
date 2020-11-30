@@ -1,0 +1,120 @@
+.gridElement {
+    grid-template-rows: 20% 30% 1fr;
+}
+
+.gridComplex {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "aside section"
+    "footer footer";
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 256px 1fr 10%;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    background-color: black;
+    grid-area: header;
+    color: white;
+}
+
+.grid--header {
+    display: grid;
+}
+
+.aside {
+    display: flex;
+    background-color: blue;
+    grid-area: aside;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.section {
+    background-color: brown;
+    grid-area: section;
+}
+
+.footer {
+    display: flex;
+    background-color: cyan;
+    grid-area: footer;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 40px;
+    width: 100%;
+    grid-gap: 40px;
+    
+}
+
+.card {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: darkmagenta;
+}
+
+.nav {
+    display: flex;
+    background-color: teal;
+    margin: 2px;
+    height: 40px;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    background-color: tomato;
+    margin: 2px;
+    height: 60px;
+    align-items: center;
+}
+
+.description {
+    display: flex;
+    background-color: violet;
+    margin: 2px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .gridComplex {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "aside"
+        "section"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 50px;
+        height: 100vh;
+    }
+    .header, aside, footer {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .gridComplex {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "section"
+        "footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 50px;
+        height: 100vh;
+    }
+}
