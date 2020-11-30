@@ -52,7 +52,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     margin: 40px;
-    width: 100%;
+    width: calc (100%-88px);
     grid-gap: 40px;
     
 }
